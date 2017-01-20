@@ -27,10 +27,13 @@ public class Receipt {
                 ReceiptCalculator calculate = new ReceiptCalculator(purchase.getInventory());
                 ReceiptConsole display = new ReceiptConsole();
                 for(Item item: purchase.getInventory()){
-//                    display.purchaseList(item);
-//                    display.salesTax(calculate.getTaxTotal());
-//                    display.totalSale(calculate.getSaleTotal());
+                    display.purchaseList(item);
+
+
                 }
+                display.lineBreak();
+                display.salesTax(calculate.getTaxTotal());
+                display.totalSale(calculate.getSaleTotal());
 //                display.salesTax(calculate.getTaxTotal());
 //                display.total(calculate.getSaleTotal());
 
