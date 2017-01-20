@@ -34,8 +34,6 @@ public class ReceiptScanner {
         Matcher m = p.matcher(details);
         m.find();
         return Integer.parseInt(m.group(0));
-
-
     }
 
     private String scanDetails(String details) {
@@ -50,8 +48,6 @@ public class ReceiptScanner {
         Matcher m = p.matcher(details);
         m.find();
         return Double.parseDouble(m.group(0));
-
-
     }
 
 }
