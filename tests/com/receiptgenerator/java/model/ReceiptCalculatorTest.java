@@ -23,6 +23,7 @@ public class ReceiptCalculatorTest {
         calculator = new ReceiptCalculator(purchase.getInventory());
     }
 
+
     @Test
     public void calculatorCorrectlyProvidesAccurateSaleTotal() throws Exception {
         Double expectedTotal = 29.83;
