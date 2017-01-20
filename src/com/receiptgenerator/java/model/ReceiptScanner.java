@@ -5,19 +5,21 @@ import java.io.FileReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by N/A on 1/19/17.
- */
 public class ReceiptScanner {
     private Purchase purchase;
 
     public ReceiptScanner(String cart) {
+
         try {
             BufferedReader reader = new BufferedReader(new FileReader(cart));
             String itemDetails;
             this.purchase = new Purchase();
             while ((itemDetails = reader.readLine()) != null) {
-                this.purchase.addItem(scanQty(itemDetails), scanDetails(itemDetails), scanPrice(itemDetails));
+                this.purchase.addItem(
+                        scanQty(itemDetails),
+                        scanDetails(itemDetails),
+                        scanPrice(itemDetails)
+                );
             }
             reader.close();
         } catch (Exception e) {
@@ -49,7 +51,6 @@ public class ReceiptScanner {
         m.find();
         return Double.parseDouble(m.group(0));
     }
-
 }
 
 

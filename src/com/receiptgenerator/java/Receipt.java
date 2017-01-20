@@ -1,15 +1,14 @@
 package com.receiptgenerator.java;
 
-import com.receiptgenerator.java.model.*;
+import com.receiptgenerator.java.model.Item;
+import com.receiptgenerator.java.model.Purchase;
+import com.receiptgenerator.java.model.ReceiptCalculator;
+import com.receiptgenerator.java.model.ReceiptConsole;
+import com.receiptgenerator.java.model.ReceiptScanner;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 
-/**
- * Created by N/A on 1/19/17.
- */
 public class Receipt {
     public static void main(String[] importCarts) throws IOException {
         String[] defaultCarts = {
@@ -26,7 +25,7 @@ public class Receipt {
                 ReceiptScanner rScanner = new ReceiptScanner(cart);
                 Purchase purchase = rScanner.getPurchase();
                 ReceiptCalculator calculate = new ReceiptCalculator(purchase.getInventory());
-//                ReceiptConsole display = new ReceiptConsole();
+                ReceiptConsole display = new ReceiptConsole();
                 for(Item item: purchase.getInventory()){
 //                    display.purchaseList(item);
 //                    display.salesTax(calculate.getTaxTotal());
