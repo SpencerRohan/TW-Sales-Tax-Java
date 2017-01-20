@@ -13,8 +13,6 @@ public class ReceiptCalculator {
             this.taxTotal = this.taxTotal + computeSalesTax(item);
         }
         this.saleTotal = this.itemTotal + this.taxTotal;
-//        System.out.printf("%.2f" + "\n",this.taxTotal);
-//        System.out.printf("%.2f" + "\n",this.saleTotal);
     }
 
     private Double computeSalesTax(Item item){
@@ -28,10 +26,6 @@ public class ReceiptCalculator {
         }
         Double rounded = roundAmount(item.getPrice()*tax);
         item.setAfterTax(rounded);
-
-
-//        System.out.printf("%.2f" + "\n", item.getAfterTax());
-
         return rounded;
     }
 
