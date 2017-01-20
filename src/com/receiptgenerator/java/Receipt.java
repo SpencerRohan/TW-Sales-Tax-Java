@@ -25,13 +25,12 @@ public class Receipt {
             if (new File(cart).exists()){
                 ReceiptScanner rScanner = new ReceiptScanner(cart);
                 Purchase purchase = rScanner.getPurchase();
-//                ReceiptCalculator calculate = new ReceiptCalculator(purchase.getInventory());
-                ReceiptConsole display = new ReceiptConsole();
+                ReceiptCalculator calculate = new ReceiptCalculator(purchase.getInventory());
+//                ReceiptConsole display = new ReceiptConsole();
                 for(Item item: purchase.getInventory()){
-                    display.purchaseList(item);
-                    System.out.println(item.isExempt());
-                    System.out.println(item.isImport());
-                    System.out.println(item.getDetails());
+//                    display.purchaseList(item);
+//                    display.salesTax(calculate.getTaxTotal());
+//                    display.totalSale(calculate.getSaleTotal());
                 }
 //                display.salesTax(calculate.getTaxTotal());
 //                display.total(calculate.getSaleTotal());

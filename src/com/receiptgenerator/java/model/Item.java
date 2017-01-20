@@ -11,6 +11,7 @@ public class Item {
     private Double price;
     private Boolean isImport = false;
     private Boolean isExempt = false;
+    private Double afterTax;
 
     public Item(int qty, String details, Double price){
         this.qty = qty;
@@ -49,5 +50,13 @@ public class Item {
 
     public Boolean isImport(){
         return this.isImport;
+    }
+
+    public Double setAfterTax(Double taxes){
+        return this.afterTax = this.price + taxes;
+    }
+
+    public Double getAfterTax(){
+        return this.afterTax;
     }
 }
