@@ -60,11 +60,10 @@ public class ItemTest {
     @Test
     public void setAfterTaxSetsCorrectAfterTaxPrice() throws Exception {
         Double amount = 2.00;
-        Double afterTax = item.getPrice() + amount;
 
         item.setAfterTax(amount);
 
-        assertEquals(afterTax, item.getAfterTax());
+        assertEquals(amount, item.getAfterTax());
     }
 
     @Test
