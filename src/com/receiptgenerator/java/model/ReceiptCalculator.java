@@ -1,11 +1,7 @@
 package com.receiptgenerator.java.model;
 
-
 import java.util.List;
 
-/**
- * Created by N/A on 1/19/17.
- */
 public class ReceiptCalculator {
     private Double taxTotal = 0.00;
     private Double saleTotal = 0.00;
@@ -17,12 +13,10 @@ public class ReceiptCalculator {
             this.taxTotal = this.taxTotal + computeSalesTax(item);
         }
         this.saleTotal = this.itemTotal + this.taxTotal;
-//        System.out.printf("%.2f" + "\n",this.taxTotal);
-//        System.out.printf("%.2f" + "\n",this.saleTotal);
     }
 
     private Double computeSalesTax(Item item){
-        Double tax = new Double(.10);
+        Double tax = .10;
         if (item.isExempt()){
             tax = .00;
         }
@@ -32,17 +26,7 @@ public class ReceiptCalculator {
         }
         Double rounded = roundAmount(item.getPrice()*tax);
         item.setAfterTax(rounded);
-
-
-//        System.out.printf("%.2f" + "\n", item.getAfterTax());
-
         return rounded;
-
-    }
-
-    private Double computeSaleTotal(){
-
-       return this.saleTotal = (this.taxTotal + this.itemTotal);
     }
 
     public Double getTaxTotal() {
@@ -55,5 +39,9 @@ public class ReceiptCalculator {
 
     private Double roundAmount(Double amount){
         return Math.ceil((amount * 20.0)) / 20.0;
+    }
+
+    private Double computeSaleTotal(){
+        return this.saleTotal = (this.taxTotal + this.itemTotal);
     }
 }
