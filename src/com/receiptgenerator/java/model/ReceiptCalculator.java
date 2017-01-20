@@ -9,7 +9,7 @@ public class ReceiptCalculator {
 
     public ReceiptCalculator(List<Item> items){
         for(Item item: items){
-            this.itemTotal = this.itemTotal + item.getPrice();
+            this.itemTotal = this.itemTotal + (item.getPrice() * item.getQty());
             this.taxTotal = this.taxTotal + computeSalesTax(item);
         }
         this.saleTotal = this.itemTotal + this.taxTotal;
@@ -24,8 +24,8 @@ public class ReceiptCalculator {
         if (item.isImport()){
             tax = tax + .05;
         }
-        Double rounded = roundAmount(item.getPrice()*tax);
-        item.setAfterTax(rounded);
+        Double rounded = roundAmount((item.getPrice()*tax) * item.getQty());
+        item.setAfterTax(rounded + (item.getPrice() * item.getQty()));
         return rounded;
     }
 
