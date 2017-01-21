@@ -17,7 +17,6 @@ gen### Java template
 
 # Package Files #
 *.jar
-!TW-Sales-Tax-Java.jar
 *.war
 *.ear
 
