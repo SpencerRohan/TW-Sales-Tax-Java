@@ -37,8 +37,8 @@ public class Item {
         return this.isImport;
     }
 
-    public Double setAfterTax(Double taxes){
-        return this.afterTax = this.price + taxes;
+    public Double setAfterTax(Double amount){
+        return this.afterTax = amount;
     }
 
     public Double getAfterTax(){

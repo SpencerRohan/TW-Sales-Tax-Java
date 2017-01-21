@@ -5,9 +5,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by N/A on 1/20/17.
- */
 public class ItemTest {
     private Item item;
     private int qty;
@@ -60,11 +57,10 @@ public class ItemTest {
     @Test
     public void setAfterTaxSetsCorrectAfterTaxPrice() throws Exception {
         Double amount = 2.00;
-        Double afterTax = item.getPrice() + amount;
 
         item.setAfterTax(amount);
 
-        assertEquals(afterTax, item.getAfterTax());
+        assertEquals(amount, item.getAfterTax());
     }
 
     @Test
