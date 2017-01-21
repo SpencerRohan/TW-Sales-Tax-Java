@@ -34,7 +34,27 @@ Date: ***Jan 2017***|
 Estimated Completion Time: ***N/A*** |
 
 ### INSTRUCTIONS FOR INSTALL & USE
-N/A
+
+**Installation in IntelliJ**
+1. Import project into IntelliJ
+2. Run "Receipt" class to activate the program.
+3. Console will display calculated output.
+4. Optional filenames can be provided by going to Run>File Configurations then typing:  ```"PATH/TO/Filename.txt"``` in program arguments.  It will take more than filename string at a time.
+
+**Testing Suite Available under Test directory**
+1. Run ReceiptTest class for challenge testing
+
+**Included will also be a seperate jar file on top directory**
+1. Open Terminal
+2. cd to the unzipped folder - *note that if you remove the jar file out of the main directory the default asset .txt files will no longer run.*
+3. Type: 
+    ```java -jar TW-Sales-Tax-Java.jar```
+4. Opitional filenames can be provided by typing: 
+    ```java -jar TW-Sales-Tax-Java.jar "PATH/TO/FILENAME.TXT"```
+5. Output should be printed in the terminal.
+
+
+
 
 ### TESTING OPTIONS
 
@@ -86,7 +106,7 @@ As a Client/User... |
 ...I want the output to be shown in the terminal's console. |
 ...I want sales tax to be charged at a base rate of 10%. |
 ...I want an **EXEMPT** category of items with 0% sales tax. |
-...I want an **IMPORT** sales tax calculated at an additional 5% on all goods. |
+...I want an **IMPORT** sales tax calculated at an additonal 5% on all goods. |
 ...I want the sales tax calculation to round to the nearest .05. |
 
 As a Developer... | 
