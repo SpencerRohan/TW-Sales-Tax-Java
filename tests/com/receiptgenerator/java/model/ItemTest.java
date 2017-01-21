@@ -5,9 +5,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by N/A on 1/20/17.
- */
 public class ItemTest {
     private Item item;
     private int qty;
