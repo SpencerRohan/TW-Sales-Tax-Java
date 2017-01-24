@@ -6,13 +6,13 @@ ___
 + **Instructions For Install & Use**
 + **Testing Options**
 + **Assumptions**
-    _i. File Input_ 
-    _ii. Transcoding_ 
-    _iii. Objects & Classes_
-    _iii. Other_
+   1. _File Input_ 
+   2. _Transcoding_ 
+   3. _Objects & Classes_
+   4. _Other_
 + **Use Cases**
-    _i. As a Client/User_ 
-    _ii. As a Developer_ 
+   1. _As a Client/User_ 
+   2. _As a Developer_ 
 + **Notes, Thoughts, & Challenge Feedback**
 
 ### TECHNICAL OVERVIEW
@@ -20,7 +20,7 @@ ___
 --- |
 Language: ***Java*** | 
 Test Suite: ***jUnit*** |
-Version: ***v1.1.0*** |
+Version: ***v1.1.2*** |
 Core Assets: ***Input .txt files***|
 
 
