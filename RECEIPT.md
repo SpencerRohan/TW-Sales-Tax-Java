@@ -42,7 +42,7 @@ Estimated Completion Time: ***N/A*** |
  4. Optional filenames can be provided by going to Run>File Configurations then typing:  ```"PATH/TO/Filename.txt"``` in program arguments.  It will take more than filename string at a time.
 
 **Testing Suite Available under Test directory**
-1. Run *ReceiptTest* class for challenge testing
+ 1. Run *ReceiptTest* class for challenge testing
 
 
 
